@@ -1,62 +1,65 @@
-const words = [
-  "Frontend Developer",
-  "Web Designer",
-  "JavaScript Developer",
-  "Problem Solver"
+const words=[
+"Frontend Developer",
+"UI Designer",
+"JavaScript Developer",
+"Problem Solver"
 ];
 
-let wordIndex = 0;
-let charIndex = 0;
+let index=0;
+let char=0;
 
-const typingElement = document.getElementById("typing");
+function type(){
 
-function typeEffect() {
+if(char<words[index].length){
 
-  if(charIndex < words[wordIndex].length){
+document.getElementById("typing").textContent+=words[index].charAt(char);
 
-    typingElement.textContent += words[wordIndex].charAt(charIndex);
+char++;
 
-    charIndex++;
-
-    setTimeout(typeEffect,100);
-
-  }
-
-  else{
-
-    setTimeout(eraseEffect,1500);
-
-  }
+setTimeout(type,100);
 
 }
 
-function eraseEffect(){
+else{
 
-  if(charIndex > 0){
-
-    typingElement.textContent =
-      words[wordIndex].substring(0,charIndex-1);
-
-    charIndex--;
-
-    setTimeout(eraseEffect,50);
-
-  }
-
-  else{
-
-    wordIndex++;
-
-    if(wordIndex >= words.length){
-
-      wordIndex = 0;
-
-    }
-
-    setTimeout(typeEffect,500);
-
-  }
+setTimeout(erase,1500);
 
 }
 
-typeEffect();
+}
+
+function erase(){
+
+if(char>0){
+
+document.getElementById("typing").textContent=
+
+words[index].substring(0,char-1);
+
+char--;
+
+setTimeout(erase,50);
+
+}
+
+else{
+
+index++;
+
+if(index>=words.length)
+
+index=0;
+
+setTimeout(type,500);
+
+}
+
+}
+
+type();
+
+document.getElementById("theme-btn").onclick=()=>{
+
+document.body.classList.toggle("light");
+
+}
