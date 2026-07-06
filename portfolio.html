@@ -1,233 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanmai Kethi Reddy | Portfolio</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Thanmai | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div id="particles"></div>
-
 <header>
+    <div class="logo">Thanmai<span>.</span></div>
 
-<h2 class="logo">Thanmai.</h2>
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-
-<button id="theme-btn">🌙</button>
-
-</nav>
-
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero" id="home">
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h3>Hello, I'm</h3>
+        <h1>Thanmai Kethi Reddy</h1>
+        <h2 id="typing"></h2>
 
-<div class="hero-text">
+        <p>
+            Computer Science Engineering student passionate about
+            Frontend Development and creating modern web applications.
+        </p>
 
-<h1>Hi I'm <span>Thanmai</span></h1>
-
-<h3><span id="typing"></span></h3>
-
-<p>
-Computer Science Student passionate about Frontend Development,
-UI Design and building beautiful web experiences.
-</p>
-
-<a href="#projects" class="btn">View Projects</a>
-
-</div>
-
-<div class="hero-image">
-
-<img src="images/profile.jpg">
-
-</div>
-
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
 </section>
 
 <section id="about">
+    <h2 class="section-title">About Me</h2>
 
-<h2>About Me</h2>
+    <div class="about-content">
+        <p>
+            I am a Computer Science Engineering student at
+            Sri Venkateshwara College Of Engineering.
 
-<p>
+            I enjoy building responsive websites and web applications
+            using HTML, CSS and JavaScript.
 
-I'm a Computer Science Engineering student who enjoys creating
-modern websites using HTML, CSS and JavaScript.
-
-I love solving problems and continuously learning new technologies.
-
-</p>
-
+            My goal is to become a skilled Software Engineer and
+            contribute to impactful products.
+        </p>
+    </div>
 </section>
 
 <section id="skills">
 
-<h2>Skills</h2>
+    <h2 class="section-title">Skills</h2>
 
-<div class="skill">
+    <div class="skills-grid">
 
-HTML
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">C</div>
 
-<div class="bar">
-
-<span style="width:95%"></span>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-CSS
-
-<div class="bar">
-
-<span style="width:90%"></span>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-JavaScript
-
-<div class="bar">
-
-<span style="width:80%"></span>
-
-</div>
-
-</div>
-
-<div class="skill">
-
-SQL
-
-<div class="bar">
-
-<span style="width:75%"></span>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <section id="projects">
 
-<h2>Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
-<div class="cards">
+    <div class="project-container">
 
-<div class="card">
+        <div class="project-card">
+            <h3>Typing Speed Test</h3>
+            <p>
+                Measures typing speed and accuracy using JavaScript DOM operations.
+            </p>
+        </div>
 
-<h3>Typing Speed Test</h3>
+        <div class="project-card">
+            <h3>Todo Application</h3>
+            <p>
+                CRUD-based task manager with local storage support.
+            </p>
+        </div>
 
-<p>Typing speed analyzer using DOM Manipulation.</p>
+        <div class="project-card">
+            <h3>Student Application</h3>
+            <p>
+                Student registration form with user-friendly interface.
+            </p>
+        </div>
 
-<button>Github</button>
-
-</div>
-
-<div class="card">
-
-<h3>Todo Application</h3>
-
-<p>CRUD Todo Application using Local Storage.</p>
-
-<button>Github</button>
-
-</div>
-
-<div class="card">
-
-<h3>Student Application</h3>
-
-<p>Responsive Student Registration Form.</p>
-
-<button>Github</button>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <section id="education">
 
-<h2>Education</h2>
+    <h2 class="section-title">Education</h2>
 
-<div class="timeline">
+    <div class="timeline">
 
-<div>
+        <div class="timeline-item">
+            <h3>B.Tech CSE</h3>
+            <p>Sri Venkateshwara College Of Engineering (2023 - 2027)</p>
+            <span>85%</span>
+        </div>
 
-<h3>B.Tech CSE</h3>
+        <div class="timeline-item">
+            <h3>Intermediate</h3>
+            <p>Sri Chaitanya College</p>
+            <span>80%</span>
+        </div>
 
-<p>Sri Venkateshwara College Of Engineering</p>
+        <div class="timeline-item">
+            <h3>SSC</h3>
+            <p>Sri Chaitanya School</p>
+            <span>10 GPA</span>
+        </div>
 
-</div>
-
-<div>
-
-<h3>Intermediate</h3>
-
-<p>Sri Chaitanya College</p>
-
-</div>
-
-<div>
-
-<h3>SSC</h3>
-
-<p>Sri Chaitanya School</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <section id="contact">
 
-<h2>Contact</h2>
+    <h2 class="section-title">Contact Me</h2>
 
-<form>
+    <div class="contact-box">
 
-<input type="text" placeholder="Name">
+        <p>📧 thanmaikethireddy@gmail.com</p>
 
-<input type="email" placeholder="Email">
+        <p>📱 +91 8985713135</p>
 
-<textarea placeholder="Message"></textarea>
-
-<button>Send</button>
-
-</form>
+    </div>
 
 </section>
 
 <footer>
-
-© 2026 Thanmai Kethi Reddy
-
+    <p>© 2026 Thanmai Kethi Reddy. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
