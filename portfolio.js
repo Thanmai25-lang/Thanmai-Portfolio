@@ -1,65 +1,62 @@
-const words=[
-"Frontend Developer",
-"UI Designer",
-"JavaScript Developer",
-"Problem Solver"
+const words = [
+  "Frontend Developer",
+  "Web Designer",
+  "JavaScript Developer",
+  "Problem Solver"
 ];
 
-let index=0;
-let char=0;
+let wordIndex = 0;
+let charIndex = 0;
 
-function type(){
+const typingElement = document.getElementById("typing");
 
-if(char<words[index].length){
+function typeEffect() {
 
-document.getElementById("typing").textContent+=words[index].charAt(char);
+  if(charIndex < words[wordIndex].length){
 
-char++;
+    typingElement.textContent += words[wordIndex].charAt(charIndex);
 
-setTimeout(type,100);
+    charIndex++;
 
-}
+    setTimeout(typeEffect,100);
 
-else{
+  }
 
-setTimeout(erase,1500);
+  else{
 
-}
+    setTimeout(eraseEffect,1500);
 
-}
-
-function erase(){
-
-if(char>0){
-
-document.getElementById("typing").textContent=
-
-words[index].substring(0,char-1);
-
-char--;
-
-setTimeout(erase,50);
+  }
 
 }
 
-else{
+function eraseEffect(){
 
-index++;
+  if(charIndex > 0){
 
-if(index>=words.length)
+    typingElement.textContent =
+      words[wordIndex].substring(0,charIndex-1);
 
-index=0;
+    charIndex--;
 
-setTimeout(type,500);
+    setTimeout(eraseEffect,50);
+
+  }
+
+  else{
+
+    wordIndex++;
+
+    if(wordIndex >= words.length){
+
+      wordIndex = 0;
+
+    }
+
+    setTimeout(typeEffect,500);
+
+  }
 
 }
 
-}
-
-type();
-
-document.getElementById("theme-btn").onclick=()=>{
-
-document.body.classList.toggle("light");
-
-}
+typeEffect();
