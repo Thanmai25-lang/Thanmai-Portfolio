@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   ROOT VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#2563EB;
+    --secondary:#3B82F6;
+    --accent:#38BDF8;
+
+    --bg:#0F172A;
+    --bg2:#111827;
+    --card:#1E293B;
+
+    --white:#ffffff;
+    --text:#E2E8F0;
+    --gray:#94A3B8;
+
+    --border:#334155;
+
+    --shadow:0 15px 40px rgba(0,0,0,.25);
+
+    --gradient:linear-gradient(135deg,#2563EB,#38BDF8);
+
+}
+
+/* Light Theme */
+
+.light{
+
+    --bg:#F8FAFC;
+    --bg2:#ffffff;
+    --card:#ffffff;
+
+    --white:#0F172A;
+    --text:#334155;
+    --gray:#64748B;
+
+    --border:#CBD5E1;
+
+}
+
+/* ==========================================
+ RESET
+========================================== */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+/* ==========================================
+ SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--bg);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--accent);
+
+}
+
+/* ==========================================
+ GLOBAL
+========================================== */
+
+section{
+
+padding:100px 10%;
+
+}
+
+.container{
+
+width:100%;
+max-width:1200px;
+margin:auto;
+
+}
+
+h1,h2,h3{
+
+color:var(--white);
+
+}
+
+p{
+
+line-height:1.8;
+color:var(--gray);
+
+}
+
+img{
+
+max-width:100%;
+
+}
+
+/* ==========================================
+ HEADER
+========================================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:20px 10%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(15,23,42,.85);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid var(--border);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:var(--white);
+
+}
+
+.logo span{
+
+color:var(--primary);
+
+}
+
+nav{
+
+display:flex;
+align-items:center;
+gap:30px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:var(--gray);
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--primary);
+
+}
+
+#theme-btn{
+
+padding:10px 15px;
+
+border:none;
+
+background:var(--gradient);
+
+color:white;
+
+border-radius:50%;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#theme-btn:hover{
+
+transform:rotate(180deg);
+
+}
+
+/* ==========================================
+ HERO
+========================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:80px;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+
+.hero-content h3{
+
+font-size:25px;
+
+margin-bottom:15px;
+
+}
+
+.hero-content h1{
+
+font-size:65px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.hero-content h1 span{
+
+color:var(--primary);
+
+}
+
+.hero-content p{
+
+margin-bottom:30px;
+
+max-width:550px;
+
+}
+
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:380px;
+
+border-radius:50%;
+
+border:8px solid var(--primary);
+
+box-shadow:0 0 50px rgba(37,99,235,.4);
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+ BUTTONS
+========================================== */
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:var(--gradient);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.4s;
+
+box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 50px rgba(37,99,235,.35);
+
+}
+
+/* ==========================================
+ SECTION TITLE
+========================================== */
+
+.title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.title h2{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.title p{
+
+max-width:650px;
+
+margin:auto;
+
+}
+
+.title::after{
+
+content:"";
+
+display:block;
+
+width:80px;
+
+height:4px;
+
+background:var(--gradient);
+
+margin:20px auto;
+
+border-radius:50px;
+
+}
+
+/* ==========================================
+ ANIMATIONS
+========================================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.fade.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
